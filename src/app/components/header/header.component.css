@@ -1,0 +1,47 @@
+.navbar {
+    background-color: lightblue; 
+}
+.navbar-brand img {
+    width: 180px; 
+    height: 120px; 
+}
+
+.nav__item {
+    color: white; 
+    text-decoration: none; 
+    padding: 10px 20px; 
+    font-size: 18px; 
+}
+
+.nav__item.routerLinkActive {
+    background-color: blue; 
+    color: white; 
+}
+.my-button {
+    background-color: blue;
+    color: white; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 18px;
+    text-transform: uppercase; 
+    transition: all 0.2s ease-in-out; 
+}
+
+.my-button:hover {
+    background-color: darkblue; 
+    cursor: pointer;
+}
+
+.home-link {
+    color: red; 
+    text-decoration: none; 
+    font-size: 25px; 
+    padding: 10px 20px; 
+    transition: all 0.2s ease-in-out; 
+}
+
+.home-link:hover {
+    background-color: blue; 
+    color: white; 
+    cursor: pointer; 
+}

@@ -1,0 +1,40 @@
+<div class="a">
+        <h1>Login</h1>
+    </div>
+    <form class="px-8" [formGroup]="formLogin" (submit)="validarN()">
+        <div class="my-5">
+            <div>
+                <label for="username">Username:</label>
+            </div>
+            <div>
+                <input type="text" name="username" id="username" formControlName="username" 
+                placeholder="ej. Bret" required class="form-control" [class.is-invalid]="username.invalid && (username.dirty || username.touched)">
+                <div *ngIf="username.invalid && (username.dirty || username.touched)" class="invalid-feedback">
+                    <div *ngIf="username.errors?.['required']">
+                        Campo obligatorio.
+                    </div>
+                    <div *ngIf="username.errors?.['minlength']">
+                        Campo mínimo de 3 caracteres.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-5">
+            <div>
+                <label for="email">Password:</label>
+            </div>
+            <div>
+                <input class="border w-full py-2 px-2 rounded" type="text" name="email" id="email" formControlName="email" 
+                placeholder="ej: Sincere@april.biz" required class="form-control" [class.is-invalid]="email.invalid && (email.dirty || email.touched)">
+                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="invalid-feedback">
+                    <div *ngIf="email.errors?.['required']">
+                        Campo obligatorio.
+                    </div>
+                    <div *ngIf="email.errors?.['minlength']">
+                        Campo mínimo de 3 caracteres.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button [disabled]="formLogin.invalid" (click)="validate()">Iniciar sesión</button>
+    </form>
